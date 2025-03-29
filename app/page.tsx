@@ -504,6 +504,147 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Detailed Workflow Section */}
+      <section className='py-20 bg-gray-50'>
+        <div className='container mx-auto px-4'>
+          <h2 className='text-3xl md:text-4xl font-bold text-center mb-8'>
+            How Zap Makes Budget Tracking Effortless
+          </h2>
+          <p className='text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto'>
+            Our intelligent system automatically processes your email receipts
+            and invoices to give you a complete picture of your spending.
+          </p>
+
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
+            {/* Email Processing */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className='bg-white p-8 rounded-2xl shadow-lg'
+            >
+              <h3 className='text-2xl font-bold text-gray-900 mb-4'>
+                1. Smart Email Processing
+              </h3>
+              <ul className='space-y-4 text-gray-600'>
+                <li className='flex items-start'>
+                  <span className='mr-2'>•</span>
+                  <span>
+                    Automatically detects purchase receipts and invoices in your
+                    Gmail
+                  </span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='mr-2'>•</span>
+                  <span>
+                    Extracts key information like amount, date, and merchant
+                  </span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='mr-2'>•</span>
+                  <span>
+                    Works with major e-commerce and food delivery platforms
+                  </span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='mr-2'>•</span>
+                  <span>
+                    Privacy-focused: only reads transaction-related emails
+                  </span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Categorization */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className='bg-white p-8 rounded-2xl shadow-lg'
+            >
+              <h3 className='text-2xl font-bold text-gray-900 mb-4'>
+                2. Smart Categorization
+              </h3>
+              <ul className='space-y-4 text-gray-600'>
+                <li className='flex items-start'>
+                  <span className='mr-2'>•</span>
+                  <span>AI-powered automatic expense categorization</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='mr-2'>•</span>
+                  <span>
+                    Custom categories and sub-categories for detailed tracking
+                  </span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='mr-2'>•</span>
+                  <span>Split transactions into multiple categories</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='mr-2'>•</span>
+                  <span>
+                    Learn from your categorization preferences over time
+                  </span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Insights */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className='bg-white p-8 rounded-2xl shadow-lg'
+            >
+              <h3 className='text-2xl font-bold text-gray-900 mb-4'>
+                3. Actionable Insights
+              </h3>
+              <ul className='space-y-4 text-gray-600'>
+                <li className='flex items-start'>
+                  <span className='mr-2'>•</span>
+                  <span>Monthly spending breakdowns by category</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='mr-2'>•</span>
+                  <span>Trend analysis and spending patterns</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='mr-2'>•</span>
+                  <span>Customizable budgets with smart alerts</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='mr-2'>•</span>
+                  <span>Expense predictions based on historical data</span>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+
+          <div className='mt-16 text-center'>
+            <h3 className='text-2xl font-bold text-gray-900 mb-4'>
+              Coming Soon
+            </h3>
+            <ul className='inline-flex flex-wrap justify-center gap-4 text-gray-600'>
+              <li className='bg-white px-4 py-2 rounded-full shadow-sm'>
+                Bank Statement Import
+              </li>
+              <li className='bg-white px-4 py-2 rounded-full shadow-sm'>
+                Bill Reminders
+              </li>
+              <li className='bg-white px-4 py-2 rounded-full shadow-sm'>
+                Subscription Tracking
+              </li>
+              <li className='bg-white px-4 py-2 rounded-full shadow-sm'>
+                Family Sharing
+              </li>
+              <li className='bg-white px-4 py-2 rounded-full shadow-sm'>
+                Investment Tracking
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Supported Platforms */}
       <section className='py-20 bg-gray-50'>
         <div className='container mx-auto px-4'>
@@ -520,17 +661,17 @@ export default function Home() {
                 className='flex items-center justify-center p-8 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all'
               >
                 <div className='text-center'>
-                  <div className='w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center'>
+                  <div className='w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center'>
                     {brand.isMore ? (
                       <span className='text-2xl font-bold text-primary'>+</span>
                     ) : (
-                      <span className='text-2xl font-bold text-primary'>
-                        <img
-                          src={brand.logo}
-                          alt={brand.name}
-                          className='w-10 h-10'
-                        />
-                      </span>
+                      <Image
+                        src={brand.logo}
+                        alt={brand.name}
+                        width={32}
+                        height={32}
+                        className='object-contain'
+                      />
                     )}
                   </div>
                   <p className='text-lg font-semibold text-gray-800'>
