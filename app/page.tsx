@@ -81,15 +81,6 @@ function RegistrationModal({
   }, [isSubmitted, onClose]);
 
   const encode = (data: any) => {
-    console.log(data);
-
-    console.log(
-      Object.keys(data)
-        .map(
-          (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-        )
-        .join("&")
-    );
     return Object.keys(data)
       .map(
         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
@@ -106,7 +97,10 @@ function RegistrationModal({
 
     // Create FormData
     const form = e.target as HTMLFormElement;
-    const data = new FormData(form);
+    const data = {
+      email: (e.target as HTMLFormElement).email.value,
+      phone: (e.target as HTMLFormElement).phone.value,
+    };
 
     // Submit to Netlify
     fetch("/", {
