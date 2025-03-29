@@ -112,7 +112,7 @@ function RegistrationModal({
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact-form", ...data }),
+      body: encode({ "form-name": "early-access", ...data }),
     })
       .then(() => {
         console.log("Form submitted successfully");
@@ -120,6 +120,7 @@ function RegistrationModal({
         onSubmit({ email, phone });
       })
       .catch((error) => console.error(error));
+    e.preventDefault();
   };
 
   return (
