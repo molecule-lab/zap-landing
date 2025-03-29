@@ -80,8 +80,24 @@ function RegistrationModal({
     }
   }, [isSubmitted, onClose]);
 
+  const encode = (data) => {
+    console.log(data);
+
+    console.log(
+      Object.keys(data)
+        .map(
+          (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&")
+    );
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
     if (!email && !phone) {
       setError("Please provide either email or phone number");
       return;
@@ -90,13 +106,13 @@ function RegistrationModal({
 
     // Create FormData
     const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
+    const data = new FormData(form);
 
     // Submit to Netlify
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData as any).toString(),
+      body: encode({ "form-name": "contact-form", ...data }),
     })
       .then(() => {
         console.log("Form submitted successfully");
