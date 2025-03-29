@@ -283,11 +283,11 @@ function RegistrationModal({
 
 function MockupDisplay() {
   return (
-    <div className='relative w-full max-w-5xl mx-auto mt-16 lg:mt-20'>
+    <div className='relative w-full max-w-5xl mx-auto mt-12 lg:mt-32'>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.3 }}
         className='relative z-10 flex justify-center'
       >
         {/* Main Phone - Dashboard */}
@@ -307,7 +307,7 @@ function MockupDisplay() {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
           className='hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/4'
         >
           <div className='relative w-[240px] h-[500px] bg-white rounded-[2.5rem] shadow-xl border-8 border-gray-900 -rotate-12'>
@@ -327,7 +327,7 @@ function MockupDisplay() {
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
           className='hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4'
         >
           <div className='relative w-[240px] h-[500px] bg-white rounded-[2.5rem] shadow-xl border-8 border-gray-900 rotate-12'>
@@ -392,7 +392,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.3 }}
             className='max-w-4xl mx-auto text-center'
           >
             <h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
@@ -412,11 +412,11 @@ export default function Home() {
           </motion.div>
 
           {/* Mockup Display */}
-          <div className='relative w-full max-w-5xl mx-auto mt-16 lg:mt-20'>
+          <div className='relative w-full max-w-5xl mx-auto mt-12 lg:mt-32'>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.3 }}
               className='relative z-10 flex justify-center'
             >
               {/* Main Phone - Dashboard */}
@@ -436,7 +436,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
                 className='hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/4'
               >
                 <div className='relative w-[240px] h-[500px] bg-white rounded-[2.5rem] shadow-xl border-8 border-gray-900 -rotate-12'>
@@ -456,7 +456,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                transition={{ duration: 0.3, delay: 0.3 }}
                 className='hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4'
               >
                 <div className='relative w-[240px] h-[500px] bg-white rounded-[2.5rem] shadow-xl border-8 border-gray-900 rotate-12'>
@@ -476,6 +476,151 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Value Proposition Section */}
+      <section className='py-16 lg:py-40 bg-gray-50'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-4xl mx-auto'>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className='text-3xl md:text-4xl font-bold text-center mb-6'
+            >
+              Never Lose Track of Your Spending Again
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+              className='text-xl text-gray-600 text-center mb-12 lg:mb-24'
+            >
+              As great as our email inboxes are, they're not built for expense
+              tracking. Good thing, they don't have to be anymore.
+            </motion.p>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
+                className='bg-white p-8 rounded-2xl shadow-lg border border-gray-100'
+              >
+                <h3 className='text-2xl font-bold mb-4'>Our Approach</h3>
+                <ul className='space-y-4'>
+                  <li className='flex items-start'>
+                    <svg
+                      className='w-6 h-6 text-green-500 mt-1 mr-3'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M5 13l4 4L19 7'
+                      />
+                    </svg>
+                    <span>No manual data entry required</span>
+                  </li>
+                  <li className='flex items-start'>
+                    <svg
+                      className='w-6 h-6 text-green-500 mt-1 mr-3'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M5 13l4 4L19 7'
+                      />
+                    </svg>
+                    <span>Secure, read-only access to your emails</span>
+                  </li>
+                  <li className='flex items-start'>
+                    <svg
+                      className='w-6 h-6 text-green-500 mt-1 mr-3'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M5 13l4 4L19 7'
+                      />
+                    </svg>
+                    <span>AI-powered expense categorization</span>
+                  </li>
+                </ul>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.3 }}
+                className='bg-white p-8 rounded-2xl shadow-lg border border-gray-100'
+              >
+                <h3 className='text-2xl font-bold mb-4'>What You Get</h3>
+                <ul className='space-y-4'>
+                  <li className='flex items-start'>
+                    <svg
+                      className='w-6 h-6 text-primary mt-1 mr-3'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2'
+                      />
+                    </svg>
+                    <span>Complete spending history at your fingertips</span>
+                  </li>
+                  <li className='flex items-start'>
+                    <svg
+                      className='w-6 h-6 text-primary mt-1 mr-3'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6'
+                      />
+                    </svg>
+                    <span>Real-time spending insights and trends</span>
+                  </li>
+                  <li className='flex items-start'>
+                    <svg
+                      className='w-6 h-6 text-primary mt-1 mr-3'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9'
+                      />
+                    </svg>
+                    <span>Smart alerts for unusual spending</span>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className='py-20 bg-white'>
         <div className='container mx-auto px-4'>
@@ -488,7 +633,7 @@ export default function Home() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
                 className='p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
               >
                 <div className='mb-4'>{feature.icon}</div>
@@ -500,6 +645,189 @@ export default function Home() {
                 </p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Search and Filter Section */}
+      <section className='py-20 bg-gray-50'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-4xl mx-auto'>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className='text-center mb-16'
+            >
+              <h2 className='text-3xl md:text-4xl font-bold mb-6'>
+                More Than Just Numbers
+              </h2>
+              <p className='text-xl text-gray-600'>
+                Find any transaction instantly. Understand your spending
+                patterns at a glance.
+              </p>
+            </motion.div>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3 }}
+                className='relative'
+              >
+                <div className='space-y-8'>
+                  <div>
+                    <h3 className='text-2xl font-bold mb-4'>Powerful Search</h3>
+                    <p className='text-gray-600 mb-4'>
+                      Just type and find any transaction instantly. Search by:
+                    </p>
+                    <div className='grid grid-cols-2 gap-4'>
+                      <div className='flex items-center space-x-2 text-gray-600'>
+                        <svg
+                          className='w-5 h-5 text-primary'
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          stroke='currentColor'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth={2}
+                            d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
+                          />
+                        </svg>
+                        <span>Merchant</span>
+                      </div>
+                      <div className='flex items-center space-x-2 text-gray-600'>
+                        <svg
+                          className='w-5 h-5 text-primary'
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          stroke='currentColor'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth={2}
+                            d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'
+                          />
+                        </svg>
+                        <span>Category</span>
+                      </div>
+                      <div className='flex items-center space-x-2 text-gray-600'>
+                        <svg
+                          className='w-5 h-5 text-primary'
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          stroke='currentColor'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth={2}
+                            d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
+                          />
+                        </svg>
+                        <span>Date Range</span>
+                      </div>
+                      <div className='flex items-center space-x-2 text-gray-600'>
+                        <svg
+                          className='w-5 h-5 text-primary'
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          stroke='currentColor'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth={2}
+                            d='M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
+                          />
+                        </svg>
+                        <span>Amount</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className='text-2xl font-bold mb-4'>Smart Filters</h3>
+                    <div className='flex flex-wrap gap-3'>
+                      <span className='px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium'>
+                        Last 30 Days
+                      </span>
+                      <span className='px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium'>
+                        Food & Dining
+                      </span>
+                      <span className='px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium'>
+                        Above ₹1000
+                      </span>
+                      <span className='px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium'>
+                        Online Shopping
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.3 }}
+                className='bg-white p-6 rounded-2xl shadow-lg border border-gray-100'
+              >
+                <div className='flex items-center space-x-4 mb-6 p-3 bg-gray-50 rounded-lg'>
+                  <svg
+                    className='w-5 h-5 text-gray-400'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth={2}
+                      d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
+                    />
+                  </svg>
+                  <span className='text-gray-400'>Search transactions...</span>
+                </div>
+
+                <div className='space-y-4'>
+                  <div className='p-4 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer'>
+                    <div className='flex justify-between items-center mb-2'>
+                      <span className='font-medium'>Amazon.in</span>
+                      <span className='text-red-500'>-₹2,499</span>
+                    </div>
+                    <div className='flex justify-between text-sm text-gray-500'>
+                      <span>Shopping</span>
+                      <span>Today</span>
+                    </div>
+                  </div>
+
+                  <div className='p-4 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer'>
+                    <div className='flex justify-between items-center mb-2'>
+                      <span className='font-medium'>Swiggy</span>
+                      <span className='text-red-500'>-₹450</span>
+                    </div>
+                    <div className='flex justify-between text-sm text-gray-500'>
+                      <span>Food & Dining</span>
+                      <span>Yesterday</span>
+                    </div>
+                  </div>
+
+                  <div className='p-4 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer'>
+                    <div className='flex justify-between items-center mb-2'>
+                      <span className='font-medium'>Uber</span>
+                      <span className='text-red-500'>-₹350</span>
+                    </div>
+                    <div className='flex justify-between text-sm text-gray-500'>
+                      <span>Travel</span>
+                      <span>2 days ago</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -519,7 +847,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
               className='text-center p-8 bg-white rounded-2xl shadow-lg'
             >
               <div className='text-5xl font-bold text-primary mb-2'>78%</div>
@@ -530,7 +858,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
               className='text-center p-8 bg-white rounded-2xl shadow-lg'
             >
               <div className='text-5xl font-bold text-primary mb-2'>2min</div>
@@ -541,7 +869,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
               className='text-center p-8 bg-white rounded-2xl shadow-lg'
             >
               <div className='text-5xl font-bold text-primary mb-2'>100%</div>
@@ -557,7 +885,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.3 }}
                 className='relative'
               >
                 <div className='bg-white p-6 rounded-2xl shadow-lg'>
@@ -583,7 +911,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
                 className='relative'
               >
                 <div className='bg-white p-6 rounded-2xl shadow-lg'>
@@ -609,7 +937,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                transition={{ duration: 0.3, delay: 0.3 }}
                 className='relative'
               >
                 <div className='bg-white p-6 rounded-2xl shadow-lg'>
@@ -638,7 +966,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
             className='mt-20 text-center'
           >
             <div className='inline-flex flex-wrap justify-center gap-4 p-6 bg-white rounded-2xl shadow-lg'>
@@ -693,7 +1021,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
               className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
             >
               <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto'>
@@ -719,7 +1047,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
               className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
             >
               <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto'>
@@ -745,7 +1073,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
               className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
             >
               <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto'>
@@ -783,7 +1111,7 @@ export default function Home() {
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
                 className='flex items-center justify-center p-8 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all'
               >
                 <div className='text-center'>
@@ -810,6 +1138,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Mission Section */}
+      <section className='py-16 lg:py-24 bg-white'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-4xl mx-auto text-center'>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className='space-y-8'
+            >
+              <h2 className='text-3xl md:text-4xl font-bold'>Our Mission</h2>
+              <div className='space-y-6 text-xl text-gray-600 leading-relaxed'>
+                <p>
+                  We believe managing your money shouldn't be a full-time job.
+                  You shouldn't have to spend hours logging into different
+                  accounts, manually tracking expenses, or updating
+                  spreadsheets.
+                </p>
+                <p>
+                  That's why we built Zap - to give you clarity over your
+                  spending without the hassle. By connecting to your Gmail, we
+                  automatically track and organize your expenses, so you can
+                  focus on what matters most.
+                </p>
+                <p className='text-primary font-semibold'>
+                  Because financial peace of mind should be effortless.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Feedback Section */}
       <section className='py-20 bg-white'>
         <div className='container mx-auto px-4 text-center'>
@@ -826,7 +1187,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
               className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
             >
               <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto'>
@@ -853,7 +1214,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
               className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
             >
               <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto'>
@@ -880,7 +1241,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
               className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
             >
               <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto'>
@@ -906,7 +1267,7 @@ export default function Home() {
 
           <div className='flex flex-col md:flex-row items-center justify-center gap-6'>
             <a
-              href='https://forms.gle/dKnqFzCgQMmUPvYS6'
+              href='https://forms.gle/7vWHHcLz13jrp7J98'
               target='_blank'
               rel='noopener noreferrer'
               className='inline-flex items-center gap-2 text-white bg-primary px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl'
@@ -940,7 +1301,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
               className='bg-white p-6 rounded-2xl shadow-lg'
             >
               <h3 className='text-xl font-bold mb-3 text-gray-900'>
@@ -956,7 +1317,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
               className='bg-white p-6 rounded-2xl shadow-lg'
             >
               <h3 className='text-xl font-bold mb-3 text-gray-900'>
@@ -971,7 +1332,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
               className='bg-white p-6 rounded-2xl shadow-lg'
             >
               <h3 className='text-xl font-bold mb-3 text-gray-900'>
@@ -986,7 +1347,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
               className='bg-white p-6 rounded-2xl shadow-lg'
             >
               <h3 className='text-xl font-bold mb-3 text-gray-900'>
@@ -1016,7 +1377,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
               className='bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
             >
               <div className='mb-6'>
@@ -1046,7 +1407,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
               className='bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
             >
               <div className='mb-6'>
@@ -1076,7 +1437,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
               className='bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
             >
               <div className='mb-6'>
