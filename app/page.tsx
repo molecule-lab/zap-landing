@@ -142,15 +142,8 @@ function RegistrationModal({
                   className='space-y-4'
                   name='early-access'
                   method='POST'
-                  data-netlify='true'
-                  netlify-honeypot='bot-field'
+                  netlify
                 >
-                  {/* Hidden input for Netlify */}
-                  <input type='hidden' name='form-name' value='early-access' />
-                  <div hidden>
-                    <input name='bot-field' />
-                  </div>
-
                   <div>
                     <label
                       htmlFor='email'
