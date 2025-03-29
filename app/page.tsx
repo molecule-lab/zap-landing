@@ -87,8 +87,22 @@ function RegistrationModal({
       return;
     }
     setError("");
-    onSubmit({ email, phone });
-    setIsSubmitted(true);
+
+    // Create FormData
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    // Submit to Netlify
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => {
+        setIsSubmitted(true);
+        onSubmit({ email, phone });
+      })
+      .catch((error) => console.error(error));
   };
 
   return (
@@ -143,8 +157,15 @@ function RegistrationModal({
                   name='early-access'
                   method='POST'
                   data-netlify='true'
+                  netlify-honeypot='bot-field'
                 >
                   <input type='hidden' name='form-name' value='early-access' />
+                  <p className='hidden'>
+                    <label>
+                      Don't fill this out if you're human:{" "}
+                      <input name='bot-field' />
+                    </label>
+                  </p>
                   <div>
                     <label
                       htmlFor='email'
