@@ -1,12 +1,16 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Smart Budget Tracker",
-  description:
-    "Automatically track your spending across all your favorite platforms",
+export const metadata: Metadata = {
+  title: "Zap Budget Tracker",
+  description: "Smart budget tracking made simple with Gmail integration",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -15,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={inter.className}>{children}</body>
     </html>
   );

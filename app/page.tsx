@@ -228,8 +228,6 @@ function RegistrationModal({
                   <button
                     type='submit'
                     className='mt-3 w-full bg-primary text-white py-3 px-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors'
-                    onClick={() => setIsBtnDisabled(true)}
-                    disabled={isBtnDisabled}
                   >
                     Register Now
                   </button>
