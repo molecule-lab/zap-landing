@@ -162,22 +162,11 @@ function RegistrationModal({
                     </svg>
                   </button>
                 </div>
-
                 <form
-                  onSubmit={handleSubmit}
-                  className='space-y-4'
-                  name='early-access'
+                  action='https://formbold.com/s/9xvWk'
                   method='POST'
-                  data-netlify='true'
-                  netlify-honeypot='bot-field'
+                  encType='multipart/form-data'
                 >
-                  <input type='hidden' name='form-name' value='early-access' />
-                  <p className='hidden'>
-                    <label>
-                      Don't fill this out if you're human:{" "}
-                      <input name='bot-field' />
-                    </label>
-                  </p>
                   <div>
                     <label
                       htmlFor='email'
