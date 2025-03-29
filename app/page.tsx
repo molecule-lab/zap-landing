@@ -80,7 +80,7 @@ function RegistrationModal({
     }
   }, [isSubmitted, onClose]);
 
-  const encode = (data) => {
+  const encode = (data: any) => {
     console.log(data);
 
     console.log(
