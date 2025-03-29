@@ -99,6 +99,7 @@ function RegistrationModal({
       body: new URLSearchParams(formData as any).toString(),
     })
       .then(() => {
+        console.log("Form submitted successfully");
         setIsSubmitted(true);
         onSubmit({ email, phone });
       })
