@@ -144,6 +144,7 @@ function RegistrationModal({
                   method='POST'
                   data-netlify='true'
                 >
+                  <input type='hidden' name='form-name' value='early-access' />
                   <div>
                     <label
                       htmlFor='email'
