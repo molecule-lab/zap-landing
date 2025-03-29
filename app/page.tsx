@@ -142,7 +142,7 @@ function RegistrationModal({
                   className='space-y-4'
                   name='early-access'
                   method='POST'
-                  netlify
+                  data-netlify='true'
                 >
                   <div>
                     <label
