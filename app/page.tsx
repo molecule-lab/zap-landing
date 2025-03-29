@@ -15,6 +15,7 @@ const brands = [
   { name: "Flipkart", logo: "/flipkart.png" },
   { name: "Swiggy", logo: "/swiggy.png" },
   { name: "Zomato", logo: "/zomato.png" },
+  { name: "Many More", logo: "/more.png", isMore: true },
 ];
 
 const features = [
@@ -509,7 +510,7 @@ export default function Home() {
           <h2 className='text-3xl md:text-4xl font-bold text-center mb-16'>
             Supported Platforms
           </h2>
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-5xl mx-auto'>
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
             {brands.map((brand, index) => (
               <motion.div
                 key={index}
@@ -520,9 +521,17 @@ export default function Home() {
               >
                 <div className='text-center'>
                   <div className='w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center'>
-                    <span className='text-2xl font-bold text-primary'>
-                      {brand.name[0]}
-                    </span>
+                    {brand.isMore ? (
+                      <span className='text-2xl font-bold text-primary'>+</span>
+                    ) : (
+                      <span className='text-2xl font-bold text-primary'>
+                        <img
+                          src={brand.logo}
+                          alt={brand.name}
+                          className='w-10 h-10'
+                        />
+                      </span>
+                    )}
                   </div>
                   <p className='text-lg font-semibold text-gray-800'>
                     {brand.name}
