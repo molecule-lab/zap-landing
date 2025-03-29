@@ -508,139 +508,265 @@ export default function Home() {
       <section className='py-20 bg-gray-50'>
         <div className='container mx-auto px-4'>
           <h2 className='text-3xl md:text-4xl font-bold text-center mb-8'>
-            How Zap Makes Budget Tracking Effortless
+            Why People Love Zap
           </h2>
-          <p className='text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto'>
-            Our intelligent system automatically processes your email receipts
-            and invoices to give you a complete picture of your spending.
+          <p className='text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto'>
+            Join thousands of users who are taking control of their finances
           </p>
 
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
-            {/* Email Processing */}
+          {/* Stats Section */}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 max-w-5xl mx-auto'>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className='bg-white p-8 rounded-2xl shadow-lg'
+              className='text-center p-8 bg-white rounded-2xl shadow-lg'
             >
-              <h3 className='text-2xl font-bold text-gray-900 mb-4'>
-                1. Smart Email Processing
-              </h3>
-              <ul className='space-y-4 text-gray-600'>
-                <li className='flex items-start'>
-                  <span className='mr-2'>•</span>
-                  <span>
-                    Automatically detects purchase receipts and invoices in your
-                    Gmail
-                  </span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='mr-2'>•</span>
-                  <span>
-                    Extracts key information like amount, date, and merchant
-                  </span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='mr-2'>•</span>
-                  <span>
-                    Works with major e-commerce and food delivery platforms
-                  </span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='mr-2'>•</span>
-                  <span>
-                    Privacy-focused: only reads transaction-related emails
-                  </span>
-                </li>
-              </ul>
+              <div className='text-5xl font-bold text-primary mb-2'>78%</div>
+              <p className='text-gray-600'>
+                People who track expenses report improved financial habits
+              </p>
             </motion.div>
-
-            {/* Categorization */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className='text-center p-8 bg-white rounded-2xl shadow-lg'
+            >
+              <div className='text-5xl font-bold text-primary mb-2'>2min</div>
+              <p className='text-gray-600'>
+                Average time to set up your account and start tracking
+              </p>
+            </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className='bg-white p-8 rounded-2xl shadow-lg'
+              className='text-center p-8 bg-white rounded-2xl shadow-lg'
             >
-              <h3 className='text-2xl font-bold text-gray-900 mb-4'>
-                2. Smart Categorization
-              </h3>
-              <ul className='space-y-4 text-gray-600'>
-                <li className='flex items-start'>
-                  <span className='mr-2'>•</span>
-                  <span>AI-powered automatic expense categorization</span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='mr-2'>•</span>
-                  <span>
-                    Custom categories and sub-categories for detailed tracking
-                  </span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='mr-2'>•</span>
-                  <span>Split transactions into multiple categories</span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='mr-2'>•</span>
-                  <span>
-                    Learn from your categorization preferences over time
-                  </span>
-                </li>
-              </ul>
-            </motion.div>
-
-            {/* Insights */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className='bg-white p-8 rounded-2xl shadow-lg'
-            >
-              <h3 className='text-2xl font-bold text-gray-900 mb-4'>
-                3. Actionable Insights
-              </h3>
-              <ul className='space-y-4 text-gray-600'>
-                <li className='flex items-start'>
-                  <span className='mr-2'>•</span>
-                  <span>Monthly spending breakdowns by category</span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='mr-2'>•</span>
-                  <span>Trend analysis and spending patterns</span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='mr-2'>•</span>
-                  <span>Customizable budgets with smart alerts</span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='mr-2'>•</span>
-                  <span>Expense predictions based on historical data</span>
-                </li>
-              </ul>
+              <div className='text-5xl font-bold text-primary mb-2'>100%</div>
+              <p className='text-gray-600'>
+                Automated expense tracking from your email
+              </p>
             </motion.div>
           </div>
 
-          <div className='mt-16 text-center'>
-            <h3 className='text-2xl font-bold text-gray-900 mb-4'>
-              Coming Soon
-            </h3>
-            <ul className='inline-flex flex-wrap justify-center gap-4 text-gray-600'>
-              <li className='bg-white px-4 py-2 rounded-full shadow-sm'>
-                Bank Statement Import
-              </li>
-              <li className='bg-white px-4 py-2 rounded-full shadow-sm'>
-                Bill Reminders
-              </li>
-              <li className='bg-white px-4 py-2 rounded-full shadow-sm'>
-                Subscription Tracking
-              </li>
-              <li className='bg-white px-4 py-2 rounded-full shadow-sm'>
-                Family Sharing
-              </li>
-              <li className='bg-white px-4 py-2 rounded-full shadow-sm'>
-                Investment Tracking
-              </li>
-            </ul>
+          {/* Process Flow */}
+          <div className='max-w-6xl mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className='relative'
+              >
+                <div className='bg-white p-6 rounded-2xl shadow-lg'>
+                  <div className='w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto'>
+                    <div className='text-3xl font-bold text-primary'>1</div>
+                  </div>
+                  <h3 className='text-xl font-bold text-center mb-4'>
+                    Connect Gmail
+                  </h3>
+                  <div className='aspect-video bg-gray-50 rounded-lg mb-4 overflow-hidden'>
+                    <div className='w-full h-full flex items-center justify-center'>
+                      <div className='w-12 h-12 text-primary'>
+                        <SiGmail className='w-full h-full' />
+                      </div>
+                    </div>
+                  </div>
+                  <p className='text-center text-gray-600'>
+                    Securely connect your Gmail account in just one click
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className='relative'
+              >
+                <div className='bg-white p-6 rounded-2xl shadow-lg'>
+                  <div className='w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto'>
+                    <div className='text-3xl font-bold text-primary'>2</div>
+                  </div>
+                  <h3 className='text-xl font-bold text-center mb-4'>
+                    Auto-Track Expenses
+                  </h3>
+                  <div className='aspect-video bg-gray-50 rounded-lg mb-4 overflow-hidden'>
+                    <div className='w-full h-full flex items-center justify-center'>
+                      <div className='w-12 h-12 text-primary'>
+                        <FaChartLine className='w-full h-full' />
+                      </div>
+                    </div>
+                  </div>
+                  <p className='text-center text-gray-600'>
+                    AI automatically categorizes your expenses
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className='relative'
+              >
+                <div className='bg-white p-6 rounded-2xl shadow-lg'>
+                  <div className='w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto'>
+                    <div className='text-3xl font-bold text-primary'>3</div>
+                  </div>
+                  <h3 className='text-xl font-bold text-center mb-4'>
+                    Get Insights
+                  </h3>
+                  <div className='aspect-video bg-gray-50 rounded-lg mb-4 overflow-hidden'>
+                    <div className='w-full h-full flex items-center justify-center'>
+                      <div className='w-12 h-12 text-primary'>
+                        <FaBell className='w-full h-full' />
+                      </div>
+                    </div>
+                  </div>
+                  <p className='text-center text-gray-600'>
+                    Get personalized insights and smart alerts
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Trust Indicators */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className='mt-20 text-center'
+          >
+            <div className='inline-flex flex-wrap justify-center gap-4 p-6 bg-white rounded-2xl shadow-lg'>
+              <div className='flex items-center gap-2 text-gray-600'>
+                <FaShieldAlt className='w-5 h-5 text-primary' />
+                <span>Bank-grade security</span>
+              </div>
+              <div className='flex items-center gap-2 text-gray-600'>
+                <svg
+                  className='w-5 h-5 text-primary'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z'
+                  />
+                </svg>
+                <span>256-bit encryption</span>
+              </div>
+              <div className='flex items-center gap-2 text-gray-600'>
+                <svg
+                  className='w-5 h-5 text-primary'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'
+                  />
+                </svg>
+                <span>GDPR Compliant</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Coming Soon Section with Visual Cards */}
+      <section className='py-20 bg-white'>
+        <div className='container mx-auto px-4'>
+          <h2 className='text-3xl md:text-4xl font-bold text-center mb-16'>
+            Coming Soon
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto'>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
+            >
+              <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto'>
+                <svg
+                  className='w-6 h-6 text-primary'
+                  fill='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z'
+                  />
+                </svg>
+              </div>
+              <h3 className='text-xl font-bold mb-2'>Bank Integration</h3>
+              <p className='text-gray-600'>
+                Connect your bank accounts for complete financial tracking
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
+            >
+              <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto'>
+                <svg
+                  className='w-6 h-6 text-primary'
+                  fill='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'
+                  />
+                </svg>
+              </div>
+              <h3 className='text-xl font-bold mb-2'>Bill Reminders</h3>
+              <p className='text-gray-600'>
+                Never miss a payment with smart bill reminders
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
+            >
+              <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto'>
+                <svg
+                  className='w-6 h-6 text-primary'
+                  fill='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
+                  />
+                </svg>
+              </div>
+              <h3 className='text-xl font-bold mb-2'>Family Sharing</h3>
+              <p className='text-gray-600'>
+                Share expenses and budgets with family members
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -680,6 +806,302 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Feedback Section */}
+      <section className='py-20 bg-white'>
+        <div className='container mx-auto px-4 text-center'>
+          <h2 className='text-3xl md:text-4xl font-bold mb-8'>
+            Help Shape the Future of Zap
+          </h2>
+          <p className='text-xl text-gray-600 mb-12 max-w-2xl mx-auto'>
+            We're building Zap for you! Share your thoughts, feature requests,
+            or suggestions.
+          </p>
+
+          {/* Feedback Categories */}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16'>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
+            >
+              <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto'>
+                <svg
+                  className='w-6 h-6 text-primary'
+                  fill='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
+                  />
+                </svg>
+              </div>
+              <h3 className='text-xl font-bold mb-3'>Feature Ideas</h3>
+              <p className='text-gray-600'>
+                Share your innovative ideas for new features that would make Zap
+                more useful for you
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
+            >
+              <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto'>
+                <svg
+                  className='w-6 h-6 text-primary'
+                  fill='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905 0 .905.714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5'
+                  />
+                </svg>
+              </div>
+              <h3 className='text-xl font-bold mb-3'>User Experience</h3>
+              <p className='text-gray-600'>
+                Tell us how we can make Zap more intuitive and easier to use in
+                your daily life
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
+            >
+              <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto'>
+                <svg
+                  className='w-6 h-6 text-primary'
+                  fill='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z'
+                  />
+                </svg>
+              </div>
+              <h3 className='text-xl font-bold mb-3'>General Feedback</h3>
+              <p className='text-gray-600'>
+                Any other thoughts or suggestions? We'd love to hear from you!
+              </p>
+            </motion.div>
+          </div>
+
+          <div className='flex flex-col md:flex-row items-center justify-center gap-6'>
+            <a
+              href='https://forms.gle/dKnqFzCgQMmUPvYS6'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-flex items-center gap-2 text-white bg-primary px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl'
+            >
+              <svg
+                className='w-6 h-6'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z'
+                />
+              </svg>
+              Share Feedback
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className='py-20 bg-gray-50'>
+        <div className='container mx-auto px-4'>
+          <h2 className='text-3xl md:text-4xl font-bold text-center mb-8'>
+            Frequently Asked Questions
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className='bg-white p-6 rounded-2xl shadow-lg'
+            >
+              <h3 className='text-xl font-bold mb-3 text-gray-900'>
+                Is my data secure?
+              </h3>
+              <p className='text-gray-600'>
+                Absolutely! We use bank-grade encryption and only read
+                transaction-related emails. Your personal data stays private and
+                secure.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className='bg-white p-6 rounded-2xl shadow-lg'
+            >
+              <h3 className='text-xl font-bold mb-3 text-gray-900'>
+                How does email scanning work?
+              </h3>
+              <p className='text-gray-600'>
+                Our AI only scans for purchase receipts and invoices in your
+                Gmail. We never read personal emails or store email content.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className='bg-white p-6 rounded-2xl shadow-lg'
+            >
+              <h3 className='text-xl font-bold mb-3 text-gray-900'>
+                Can I export my data?
+              </h3>
+              <p className='text-gray-600'>
+                Yes! You can export your expense data anytime in multiple
+                formats including CSV and PDF for your records.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className='bg-white p-6 rounded-2xl shadow-lg'
+            >
+              <h3 className='text-xl font-bold mb-3 text-gray-900'>
+                What platforms are supported?
+              </h3>
+              <p className='text-gray-600'>
+                We support major e-commerce and service platforms including
+                Amazon, Uber, Flipkart, Swiggy, Zomato, and many more are being
+                added regularly.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className='py-20 bg-white'>
+        <div className='container mx-auto px-4'>
+          <h2 className='text-3xl md:text-4xl font-bold text-center mb-4'>
+            What Our Alpha Testers Say
+          </h2>
+          <p className='text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto'>
+            Early feedback from users who've experienced Zap's potential
+          </p>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className='bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
+            >
+              <div className='mb-6'>
+                <svg
+                  className='w-8 h-8 text-primary/40'
+                  fill='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z' />
+                </svg>
+              </div>
+              <p className='text-gray-600 mb-6 italic'>
+                "The automatic categorization is spot on! I no longer need to
+                manually track my online shopping expenses. It's exactly what I
+                needed."
+              </p>
+              <div className='flex items-center'>
+                <div className='ml-3'>
+                  <p className='text-sm font-semibold text-gray-900'>
+                    Priya M.
+                  </p>
+                  <p className='text-sm text-gray-500'>Product Manager</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className='bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
+            >
+              <div className='mb-6'>
+                <svg
+                  className='w-8 h-8 text-primary/40'
+                  fill='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z' />
+                </svg>
+              </div>
+              <p className='text-gray-600 mb-6 italic'>
+                "Setup was incredibly easy, and within minutes I could see all
+                my recent purchases. The insights have already helped me
+                identify areas where I can save."
+              </p>
+              <div className='flex items-center'>
+                <div className='ml-3'>
+                  <p className='text-sm font-semibold text-gray-900'>
+                    Rahul S.
+                  </p>
+                  <p className='text-sm text-gray-500'>Software Engineer</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className='bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100'
+            >
+              <div className='mb-6'>
+                <svg
+                  className='w-8 h-8 text-primary/40'
+                  fill='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z' />
+                </svg>
+              </div>
+              <p className='text-gray-600 mb-6 italic'>
+                "As someone who shops across multiple platforms, having all my
+                expenses in one place is a game-changer. The privacy features
+                are also really reassuring."
+              </p>
+              <div className='flex items-center'>
+                <div className='ml-3'>
+                  <p className='text-sm font-semibold text-gray-900'>
+                    Anita K.
+                  </p>
+                  <p className='text-sm text-gray-500'>Digital Marketer</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
