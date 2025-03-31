@@ -92,7 +92,7 @@ function RegistrationModal({
 
   const handleSubmit = (e: React.FormEvent) => {
     if (!email && !phone) {
-      setError("Please provide either email or phone number");
+      setError("Please provide email");
       return;
     }
     setError("");
@@ -105,11 +105,14 @@ function RegistrationModal({
     };
 
     // Submit to Netlify
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "early-access", ...data }),
-    })
+    fetch(
+      "https://asia-south1-zap-dev-384118.cloudfunctions.net/feedback-service",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: JSON.stringify({ fields: data }),
+      }
+    )
       .then(() => {
         console.log("Form submitted successfully");
         setIsSubmitted(true);
@@ -164,75 +167,36 @@ function RegistrationModal({
                     </svg>
                   </button>
                 </div>
-                <form
-                  action='https://formbold.com/s/9xvWk'
-                  method='POST'
-                  encType='multipart/form-data'
-                >
-                  <div>
-                    <label
-                      htmlFor='email'
-                      className='block text-sm font-medium text-gray-700 mb-1'
-                    >
-                      Email Address
-                    </label>
-                    <input
-                      type='email'
-                      id='email'
-                      name='email'
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder='your@email.com'
-                      className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary'
-                    />
-                  </div>
-
-                  <div className='relative flex items-center'>
-                    <div className='flex-grow border-t border-gray-300'></div>
-                    <span className='flex-shrink mx-4 text-gray-600'>or</span>
-                    <div className='flex-grow border-t border-gray-300'></div>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor='phone'
-                      className='block text-sm font-medium text-gray-700 mb-1'
-                    >
-                      Phone Number
-                    </label>
-                    <div className='relative flex'>
-                      <div className='absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none'>
-                        <span className='text-gray-500 select-none'>+91</span>
-                      </div>
-                      <input
-                        type='tel'
-                        id='phone'
-                        name='phone'
-                        value={phone}
-                        onChange={(e) => {
-                          const value = e.target.value.replace(/[^\d]/g, "");
-                          setPhone(value);
-                        }}
-                        placeholder='98765 43210'
-                        className='w-full pl-14 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary'
-                        maxLength={10}
-                      />
-                    </div>
-                  </div>
-
-                  {error && (
-                    <div className='bg-red-50 text-red-500 text-sm p-3 rounded-lg'>
-                      {error}
-                    </div>
-                  )}
-
-                  <button
-                    type='submit'
-                    className='mt-3 w-full bg-primary text-white py-3 px-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors'
+                <div>
+                  <label
+                    htmlFor='email'
+                    className='block text-sm font-medium text-gray-700 mb-1'
                   >
-                    Register Now
-                  </button>
-                </form>
+                    Email Address
+                  </label>
+                  <input
+                    type='email'
+                    id='email'
+                    name='email'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder='your@email.com'
+                    className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary'
+                  />
+                </div>
+
+                {error && (
+                  <div className='bg-red-50 text-red-500 text-sm p-3 rounded-lg mt-3'>
+                    {error}
+                  </div>
+                )}
+
+                <button
+                  onClick={handleSubmit}
+                  className='mt-3 w-full bg-primary text-white py-3 px-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors'
+                >
+                  Register Now
+                </button>
               </div>
             ) : (
               <div className='p-6'>
@@ -370,11 +334,49 @@ const BrandLogo = () => (
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleRegistration = (data: { email?: string; phone?: string }) => {
     // Just log the data without showing alert
     console.log("Registration data:", data);
     // The modal will automatically close and show thank you message
+  };
+
+  function emailIsValid(email: string) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !emailIsValid(email)) {
+      setError("Please provide email");
+      return;
+    }
+    setError("");
+    setLoading(true);
+
+    const data = {
+      email: email,
+      product: "zap | budget",
+    };
+
+    fetch(
+      "https://asia-south1-zap-dev-384118.cloudfunctions.net/feedback-service",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    )
+      .then(() => {
+        console.log("Form submitted successfully");
+        setEmail("");
+        alert("Thank you for registering!");
+        setLoading(false);
+      })
+      .catch((error) => console.error(error));
   };
 
   return (
@@ -403,12 +405,58 @@ export default function Home() {
               Connect your Gmail inbox and let us automatically track your
               spending across all your favorite platforms.
             </p>
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className='bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors shadow-lg hover:shadow-xl'
-            >
-              Register for Early Access
-            </button>
+            <div className='flex items-center space-y-4 flex-col '>
+              <div>
+                <input
+                  type='email'
+                  id='email'
+                  name='email'
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder='your@email.com'
+                  className='px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary'
+                />
+              </div>
+
+              {error && (
+                <div className='bg-red-50 text-red-500 text-sm p-3 rounded-lg mt-3'>
+                  {error}
+                </div>
+              )}
+              <button
+                onClick={handleSubmit}
+                disabled={loading}
+                className='bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-w-[200px]'
+              >
+                {loading ? (
+                  <>
+                    <svg
+                      className='animate-spin h-5 w-5 text-white'
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                    >
+                      <circle
+                        className='opacity-25'
+                        cx='12'
+                        cy='12'
+                        r='10'
+                        stroke='currentColor'
+                        strokeWidth='4'
+                      ></circle>
+                      <path
+                        className='opacity-75'
+                        fill='currentColor'
+                        d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
+                      ></path>
+                    </svg>
+                    <span>Submitting...</span>
+                  </>
+                ) : (
+                  "Register for Early Access"
+                )}
+              </button>
+            </div>
           </motion.div>
 
           {/* Mockup Display */}
@@ -1477,12 +1525,6 @@ export default function Home() {
             Join our exclusive early access list and get notified when we
             launch.
           </p>
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className='bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl'
-          >
-            Register for Early Access
-          </button>
         </div>
       </section>
 
