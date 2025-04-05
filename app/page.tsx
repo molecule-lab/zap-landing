@@ -379,6 +379,20 @@ export default function Home() {
       .catch((error) => console.error(error));
   };
 
+  useEffect(() => {
+    fetch(
+      "https://asia-south1-zap-dev-384118.cloudfunctions.net/feedback-service?load=true",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      }
+    )
+      .then(() => {
+        console.log("Form submitted successfully");
+      })
+      .catch((error) => console.error(error));
+  });
+
   return (
     <div className='min-h-screen bg-background'>
       {/* Navigation */}
