@@ -381,7 +381,7 @@ export default function Home() {
 
   useEffect(() => {
     fetch(
-      "https://asia-south1-zap-dev-384118.cloudfunctions.net/feedback-service?load=true",
+      "https://asia-south1-zap-dev-384118.cloudfunctions.net/feedback-service?product=zap|budget",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -391,7 +391,7 @@ export default function Home() {
         console.log("Form submitted successfully");
       })
       .catch((error) => console.error(error));
-  });
+  }, []);
 
   return (
     <div className='min-h-screen bg-background'>
