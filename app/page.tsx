@@ -109,7 +109,7 @@ function RegistrationModal({
       "https://asia-south1-zap-dev-384118.cloudfunctions.net/feedback-service",
       {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: { "Content-Type": "application//json" },
         body: JSON.stringify({ fields: data }),
       }
     )
